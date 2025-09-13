@@ -212,6 +212,9 @@ body.dark-theme {
   color: #0f2027;
 }
 
+.dark-theme .work_icon{
+  color: whitesmoke;
+}
 
 /* buttonns for dark moede */
 .nav__dark {
@@ -1142,7 +1145,7 @@ b {
 }
 
 .work_icon{
-  color: white;
+  color: #203a43;
 }
 
 /* OTHER WORK PAGE */
