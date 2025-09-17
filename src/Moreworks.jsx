@@ -1,5 +1,8 @@
-import React from "react";
+// import React from "react";
 import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import scrollreveal from "scrollreveal";
+
 
 const worksData = [
   {
@@ -26,6 +29,20 @@ const worksData = [
 ];
 
 const MoreWorks = () => {
+
+  useEffect(() => {
+    const sr = scrollreveal({
+      origin: 'bottom',
+      distance: '60px',
+      duration: 1500,
+      delay: 150,
+      reset: true,
+    })
+
+
+    sr.reveal(".more_works", { delay: 300, origin: 'bottom'})
+  }, [])
+
   return (
     <section className="section more_works container">
       <h2 className="section_title section_subtitle">On The Web</h2>

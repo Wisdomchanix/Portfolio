@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import scrollreveal from "scrollreveal";
 
 
 const About = () => {
@@ -10,30 +11,44 @@ const About = () => {
     return () => clearTimeout(timer);
   }, []);
 
+
+  useEffect(() => {
+    const sr = scrollreveal({
+      origin: 'bottom',
+      distance: '60px',
+      duration: 1500,
+      delay: 150,
+      reset: true,
+    })
+
+
+    sr.reveal(".about", { delay: 300 })
+  }, [])
+
   return (
     <section className="about section" id="about">
       <div className="about_container container">
         <div className={`about_data ${animate ? "animate" : ""}`}>
-    
+
           <h2 className="section_title about_title">About</h2>
           <h1 className="section_subtitle about_subtitle">
             Hi, I'm Wisdom Ihundah.
           </h1>
 
           <p className="about_description">
-            A dedicated <span className="about_color">Software Engineer </span> 
+            A dedicated <span className="about_color">Software Engineer </span>
             with a strong penchant for building fast, responsive and visually appealing {" "}
-            <span className="about_color">web applications. </span> 
-            I'm currently in my 2nd year of studying Software Engineering at NIIT (National Institute Of Information Technology)  
-            and i've strenghted my technical foundation through <span className="about_color">Harvard Cs50 online course </span> 
+            <span className="about_color">web applications. </span>
+            I'm currently in my 2nd year of studying Software Engineering at NIIT (National Institute Of Information Technology)
+            and i've strenghted my technical foundation through <span className="about_color">Harvard Cs50 online course </span>
             and have successfully{" "} developed innovative projects including a{" "}
-            <span className="about_color">Chrome extension</span> for sales lead 
-            management, <span className="about_color">a SaaS platform</span> for 
+            <span className="about_color">Chrome extension</span> for sales lead
+            management, <span className="about_color">a SaaS platform</span> for
             social media scheduling, and{" "}
             <span className="about_color">responsive e-commerce websites.</span>  <br />
             <br />
             I also run <span className="about_color">Revvona</span>, a small agency i founded in 2025 where my team and i have worked with real estate businesses
-            and Airbnb hosts helping them boost their sales and online presence through approriate tailored websites. This has been sharpening both my technical and 
+            and Airbnb hosts helping them boost their sales and online presence through approriate tailored websites. This has been sharpening both my technical and
             client management skills. I'm currently looking for Frontend roles where i can grow, collaborate, learn and contribute to
             impactful products.
           </p>

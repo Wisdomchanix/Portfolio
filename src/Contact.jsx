@@ -1,7 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import scrollreveal from "scrollreveal";
 
 const Contact = () => {
+
+  useEffect(() => {
+    const sr = scrollreveal({
+      origin: 'top',
+      distance: '60px',
+      duration: 1500,
+      delay: 150,
+      reset: true,
+    })
+
+
+    sr.reveal(".contact_container", { delay: 300, origin: 'top' })
+    sr.reveal(".contact_form", { delay: 300, origin: 'bottom' })
+  }, [])
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -146,9 +162,8 @@ const Contact = () => {
 
       {popup.show && (
         <p
-          className={`response_message ${
-            popup.type === "success" ? "popup-success" : "popup-error"
-          }`}
+          className={`response_message ${popup.type === "success" ? "popup-success" : "popup-error"
+            }`}
           id="response-message"
         >
           {popup.message}

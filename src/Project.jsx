@@ -1,4 +1,7 @@
-import React from "react";
+// import React from "react";
+import React, { useEffect } from "react";
+import scrollreveal from "scrollreveal";
+
 
 const projectsData = [
   {
@@ -47,6 +50,20 @@ const projectsData = [
 ];
 
 const Project = () => {
+
+    useEffect(() => {
+    const sr = scrollreveal({
+      origin: 'bottom',
+      distance: '60px',
+      duration: 1500,
+      delay: 150,
+      reset: true,
+    })
+
+
+    sr.reveal(".projects", { delay: 300 })
+  }, [])
+
   return (
     <section className="section projects container" id="projects">
       <h2 className="section_title about_section-title">Projects</h2>
