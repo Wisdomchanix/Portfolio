@@ -26,7 +26,7 @@ const About = () => {
             <span className="about_color">web applications. </span> 
             I'm currently in my 2nd year of studying Software Engineering at NIIT (National Institute Of Information Technology)  
             and i've strenghted my technical foundation through <span className="about_color">Harvard Cs50 online course </span> 
-            and i have successfully{" "} developed innovative projects including a{" "}
+            and have successfully{" "} developed innovative projects including a{" "}
             <span className="about_color">Chrome extension</span> for sales lead 
             management, <span className="about_color">a SaaS platform</span> for 
             social media scheduling, and{" "}
@@ -71,7 +71,7 @@ const About = () => {
             <div className="resume_bg-btn"></div>
             <button className="view_resume">
               <a
-                href="https://drive.google.com/file/d/1bVWsh6J9Cn21dz7VibCWVEzHbmZ4DXTt/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1yQKSqdaWDUdTHIZS7l8vWU2AUYfbysqg/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
               >

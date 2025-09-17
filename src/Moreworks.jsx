@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const worksData = [
   {
     name: "More Projects",
     icon: "ri-github-fill",
+    route: "/more-projects", // use route instead of secondary
     link: "https://github.com/Wisdomchanix",
-    secondary: "./projects.html",
   },
   {
     name: "Instagram",
@@ -31,20 +32,31 @@ const MoreWorks = () => {
       <h1 className="section_subtitle">More of my works</h1>
 
       <div className="grid work_container">
-        {worksData.map((work, index) => (
-          <a
-            key={index}
-            href={work.secondary || work.link}
-            target="_blank"
-            rel="noreferrer"
-            className="work_card"
-          >
-            <div className="work_data">
-              <i className={`${work.icon} work_icon`}></i>
-            </div>
-            <p className="work_link">{work.name}</p>
-          </a>
-        ))}
+        {worksData.map((work, index) =>
+          work.route ? (
+            // Internal link using React Router
+            <Link key={index} to={work.route} className="work_card">
+              <div className="work_data">
+                <i className={`${work.icon} work_icon`}></i>
+              </div>
+              <p className="work_link">{work.name}</p>
+            </Link>
+          ) : (
+            // External link using <a>
+            <a
+              key={index}
+              href={work.link}
+              target="_blank"
+              rel="noreferrer"
+              className="work_card"
+            >
+              <div className="work_data">
+                <i className={`${work.icon} work_icon`}></i>
+              </div>
+              <p className="work_link">{work.name}</p>
+            </a>
+          )
+        )}
       </div>
     </section>
   );

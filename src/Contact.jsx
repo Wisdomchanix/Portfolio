@@ -33,7 +33,7 @@ const Contact = () => {
         setSuccess(true);
         setPopup({
           show: true,
-          message: "Message sent successfully! I'll get back to you within 24hrs.",
+          message: "Message sent successfully! I 'll get back to you within 24hrs.",
           type: "success",
         });
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Moreprojects = () => {
   return (
@@ -130,9 +131,9 @@ const Moreprojects = () => {
         </section>
 
         <span className="back_btn">
-          <a href="./index.html" className="back_btn">
+          <Link to="/" className="back_btn">
             <i className="ri-arrow-left-line button_icon"></i> BACK
-          </a>
+          </Link>
         </span>
       </main>
 

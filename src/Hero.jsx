@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Loader from './Loader'
+import Loader from "./Loader";
 import Header from './Header'
 import About from './About'
 import Project from './Project'
 import MoreWorks from './Moreworks'
 import Contact from './Contact'
+import Scrollup from "./Scrollup";
 
 
 const Hero = () => {
@@ -18,6 +19,7 @@ const Hero = () => {
 
   return (
     <>
+      <Loader />
       <Header />
       <section className="section home" id="home">
         <div className="container home_container">
@@ -90,10 +92,11 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      <About/>
-      <Project/>
-      <MoreWorks/>
-      <Contact/>
+      <About />
+      <Project />
+      <MoreWorks />
+      <Contact />
+      <Scrollup />
     </>
   );
 };

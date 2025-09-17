@@ -1,21 +1,22 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Loader from './Loader'
+import { Routes, Route } from 'react-router-dom';
 import Hero from './Hero'
-import Scrollup from "./Scrollup";
+import Moreprojects from './Moreprojects';
 
 function App() {
 
   return (
-    <>
-      <Loader />
-      <main className='main'>
-        <Hero />
-      </main>
-      <Scrollup />
-
-    </>
+    
+    <Routes>
+      <Route path='/' element={<Hero/>} />
+      <Route path="/more-projects" element={<Moreprojects />} /> 
+    </Routes>
   )
 }
 
 export default App
+
+//  <Loader />
+//       <main className='main'>
+//         <Hero />
+//       </main>
+//       <Scrollup />
