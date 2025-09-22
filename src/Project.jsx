@@ -1,31 +1,27 @@
-// import React from "react";
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import scrollreveal from "scrollreveal";
-// import { Link } from "react-router-dom";
 
 const projectsData = [
   {
     name: "Social Media Management",
     description: "An app that schedules posts on all social media platforms.",
     github: "https://github.com/Wisdomchanix",
-    // live: null,
-    live: "/under-maintenance",
+    live: "/under-maintenance", // internal
     stack: ["Javascript", "Next.js", "React", "Css"],
   },
-
   {
     name: "Revvona",
     description: "Software Agency for Real Estate and Airbnb",
     github: "https://github.com/Wisdomchanix",
-    live: "https://Revvona.org",
+    live: "https://Revvona.org", // external
     stack: ["Next.js", "Tailwind", "Node.js"],
   },
-
   {
     name: "Media Surf",
     description: "Get images and videos of your choice from Media Surf.",
     github: "https://github.com/Wisdomchanix",
-    live: "https://mediasurff.netlify.app/",
+    live: "https://mediasurff.netlify.app/", // external
     stack: ["Pexels Api", "Tailwind", "Next.js"],
   },
   {
@@ -33,8 +29,7 @@ const projectsData = [
     description:
       "Boost Track, a Chrome extension, uses AI to help track leads and generate emails.",
     github: "https://github.com/Wisdomchanix",
-    // live: null,
-    live: "/under-maintenance",
+    live: "/under-maintenance", // internal
     stack: ["Javascript", "Html", "Css"],
   },
   {
@@ -54,19 +49,31 @@ const projectsData = [
 ];
 
 const Project = () => {
+  const navigate = useNavigate();
 
   useEffect(() => {
     const sr = scrollreveal({
-      origin: 'bottom',
-      distance: '60px',
+      origin: "bottom",
+      distance: "60px",
       duration: 1500,
       delay: 150,
       reset: true,
-    })
+    });
 
+    sr.reveal(".projects", { delay: 300 });
+  }, []);
 
-    sr.reveal(".projects", { delay: 300 })
-  }, [])
+  const handleProjectClick = (live) => {
+    if (!live) return;
+
+    if (live.startsWith("/")) {
+      // Internal route
+      navigate(live);
+    } else {
+      // External link
+      window.open(live, "_blank");
+    }
+  };
 
   return (
     <section className="section projects container" id="projects">
@@ -78,7 +85,7 @@ const Project = () => {
           <div
             className="project_card"
             key={index}
-            onClick={() => project.live && window.open(project.live, "_blank")}
+            onClick={() => handleProjectClick(project.live)}
             style={{ cursor: project.live ? "pointer" : "default" }}
           >
             <div className="project_social">
@@ -87,20 +94,33 @@ const Project = () => {
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  onClick={(e) => e.stopPropagation()} // prevent card click conflict
+                  onClick={(e) => e.stopPropagation()}
                 >
                   <i className="ri-github-fill project_icon"></i>
                 </a>
               )}
               {project.live ? (
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <i className="ri-share-box-line project_icon"></i>
-                </a>
+                project.live.startsWith("/") ? (
+                  // Internal navigation icon
+                  <span
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigate(project.live);
+                    }}
+                  >
+                    <i className="ri-share-box-line project_icon"></i>
+                  </span>
+                ) : (
+                  // External link icon
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <i className="ri-share-box-line project_icon"></i>
+                  </a>
+                )
               ) : (
                 <i className="ri-share-box-line project_icon"></i>
               )}

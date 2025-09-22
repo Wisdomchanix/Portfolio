@@ -121,7 +121,7 @@ const Moreprojects = () => {
             </article>
 
             <article className="sneaker burger">
-             <img src="/images/Realestate.png" alt="Featured" className="sneaker_img" />
+             <img src="/images/RealEstate.png" alt="Featured" className="sneaker_img" />
               <span className="sneaker_name">Real Estate Website</span>
               <a href="#" className="button_light">
                 View Project <i className="ri-arrow-right-line button_icon"></i>
