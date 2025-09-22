@@ -27,7 +27,7 @@ const Moreprojects = () => {
             </article>
 
             <article className="sneaker burger">
-              <img src="./src/images/Delivery.png" alt="Featured" className="sneaker_img" />
+              <img src="/images/Delivery.png" alt="Featured" className="sneaker_img" />
               <span className="sneaker_name">Responsive Delivery Website</span>
               <a
                 href="https://wisdomchanix.github.io/Delivery-website/"
@@ -40,7 +40,7 @@ const Moreprojects = () => {
             </article>
 
             <article className="sneaker burger">
-              <img src="./src/images/Headphone.png" alt="Featured" className="sneaker_img" />
+              <img src="/images/Headphone.png" alt="Featured" className="sneaker_img" />
               <span className="sneaker_name">A Website For A Headphone Company</span>
               <a
                 href="https://wisdomchanix.github.io/Headphone-website"
@@ -53,7 +53,7 @@ const Moreprojects = () => {
             </article>
 
             <article className="sneaker burger">
-              <img src="./src/images/Travel.png" alt="Featured" className="sneaker_img" />
+              <img src="/images/Travel.png" alt="Featured" className="sneaker_img" />
               <span className="sneaker_name">
                 Responsive Website For A Travel Agency
               </span>
@@ -68,7 +68,7 @@ const Moreprojects = () => {
             </article>
 
             <article className="sneaker burger">
-              <img src="./src/images/Resturant.png" alt="Featured" className="sneaker_img" />
+              <img src="/images/Resturant.png" alt="Featured" className="sneaker_img" />
               <span className="sneaker_name">
                 Responsive Website For A Resturant
               </span>
@@ -83,7 +83,7 @@ const Moreprojects = () => {
             </article>
 
             <article className="sneaker burger">
-               <img src="./src/images/Wristwatch.png" alt="Featured" className="sneaker_img" />
+               <img src="/images/Wristwatch.png" alt="Featured" className="sneaker_img" />
               <span className="sneaker_name">
                 An E-commerce Website For A Wristwatch Store
               </span>
@@ -98,7 +98,7 @@ const Moreprojects = () => {
             </article>
 
             <article className="sneaker burger">
-              <img src="./src/images/Shoe.png" alt="Featured" className="sneaker_img" />
+              <img src="/images/Shoe.png" alt="Featured" className="sneaker_img" />
               <span className="sneaker_name">
                 Responsive E-commerce Sneakers Website
               </span>
@@ -113,7 +113,7 @@ const Moreprojects = () => {
             </article>
 
             <article className="sneaker burger">
-              <img src="./src/images/Gym.png" alt="Featured" className="sneaker_img" />
+              <img src="/images/Gym.png" alt="Featured" className="sneaker_img" />
               <span className="sneaker_name">Gym Website</span>
               <a href="#" className="button_light">
                 View Project <i className="ri-arrow-right-line button_icon"></i>
@@ -121,7 +121,7 @@ const Moreprojects = () => {
             </article>
 
             <article className="sneaker burger">
-             <img src="./src/images/Realestate.png" alt="Featured" className="sneaker_img" />
+             <img src="/images/Realestate.png" alt="Featured" className="sneaker_img" />
               <span className="sneaker_name">Real Estate Website</span>
               <a href="#" className="button_light">
                 View Project <i className="ri-arrow-right-line button_icon"></i>
