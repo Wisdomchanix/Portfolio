@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./UnderMaintain.css";
+import "./Undermaintain.css";
 
 const UnderMaintenance = () => {
     const calculateTimeLeft = () => {
