@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Hero from './Hero'
 import Moreprojects from './Moreprojects';
-import UnderMaintenance from './UnderMaintenance';
+import UnderMaintenance from './Undermaintenance';
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
 export default App
 
 //  <Loader />
-//       <main className='main'>
+//       <main className='main'
 //         <Hero />
 //       </main>
 //       <Scrollup />
