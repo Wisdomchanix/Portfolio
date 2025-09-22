@@ -12,7 +12,7 @@ const Moreprojects = () => {
           <div className="featured_container bd_grid">
             {/* Each project */}
             <article className="sneaker burger">
-              <img src="./src/images/Hamburger.png" alt="Featured" className="sneaker_img" />
+              <img src="/images/Hamburger.png" alt="Featured" className="sneaker_img" />
               <span className="sneaker_name">
                 Responsive Website For A Hamburger Resturant
               </span>
