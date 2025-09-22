@@ -70,9 +70,10 @@ const About = () => {
           {/* Certificate */}
           <div className="certificate">
             <img
-              src="./src/images/CS50 certificate.jpg"
+              src="./src/images/CS50 certificate.png"
               alt="Harvard CS50 certificate"
               className="certificate"
+              loading="lazy"
             />
           </div>
 

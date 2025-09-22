@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Hero from './Hero'
 import Moreprojects from './Moreprojects';
+import UnderMaintenance from './Undermaintenance';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Hero/>} />
       <Route path="/more-projects" element={<Moreprojects />} /> 
+      <Route path="/under-maintenance" element={<UnderMaintenance />} /> 
     </Routes>
   )
 }

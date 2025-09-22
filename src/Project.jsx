@@ -1,16 +1,26 @@
 // import React from "react";
 import React, { useEffect } from "react";
 import scrollreveal from "scrollreveal";
-
+// import { Link } from "react-router-dom";
 
 const projectsData = [
   {
     name: "Social Media Management",
     description: "An app that schedules posts on all social media platforms.",
     github: "https://github.com/Wisdomchanix",
-    live: null,
+    // live: null,
+    live: "/under-maintenance",
     stack: ["Javascript", "Next.js", "React", "Css"],
   },
+
+  {
+    name: "Revvona",
+    description: "Software Agency for Real Estate and Airbnb",
+    github: "https://github.com/Wisdomchanix",
+    live: "https://Revvona.org",
+    stack: ["Next.js", "Tailwind", "Node.js"],
+  },
+
   {
     name: "Media Surf",
     description: "Get images and videos of your choice from Media Surf.",
@@ -23,7 +33,8 @@ const projectsData = [
     description:
       "Boost Track, a Chrome extension, uses AI to help track leads and generate emails.",
     github: "https://github.com/Wisdomchanix",
-    live: null,
+    // live: null,
+    live: "/under-maintenance",
     stack: ["Javascript", "Html", "Css"],
   },
   {
@@ -32,13 +43,6 @@ const projectsData = [
     github: "https://github.com/Wisdomchanix",
     live: "https://ajebomarket.com/?gad_source=1&gbraid=0AAAAADe9882NJaVphvUUoSzZBt_prBq7Y",
     stack: ["MongoDB", "Express", "Next.js", "Node.js"],
-  },
-  {
-    name: "Revvona",
-    description: "Software Agency for Real Estate and Airbnb",
-    github: "https://github.com/Wisdomchanix",
-    live: "https://Revvona.org",
-    stack: ["Next.js", "Tailwind", "Node.js"],
   },
   {
     name: "Toad&Co",
@@ -51,7 +55,7 @@ const projectsData = [
 
 const Project = () => {
 
-    useEffect(() => {
+  useEffect(() => {
     const sr = scrollreveal({
       origin: 'bottom',
       distance: '60px',
